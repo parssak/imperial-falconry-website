@@ -35,12 +35,12 @@
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
           <router-link :to="{ name: 'home' }">
-            <span class="sr-only">Company Name</span>
+            <span class="sr-only">Imperial Falconry Services Inc.</span>
             <div class="flex items-center">
               <img
                 class="h-9 w-auto flex items-center"
-                src="@/assets/logo.svg"
-                alt="Company Name"
+                src="@/assets/logo.png"
+                alt="Imperial Falconry Services Inc."
               />
             </div>
           </router-link>
@@ -114,7 +114,7 @@
                 <img
                   class="h-7 w-auto"
                   src="@/assets/logo.svg"
-                  alt="Company name"
+                  alt="Imperial Falconry Services Inc."
                 />
               </router-link>
               <div class="-mr-2">

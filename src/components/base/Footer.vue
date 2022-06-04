@@ -5,7 +5,7 @@
       <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
         <div class="xl:col-span-2">
           <router-link :to="{ name: 'home' }">
-            <img class="w-auto" src="@/assets/logo.png" alt="Company Name" />
+            <img class="w-auto h-12" src="@/assets/logo.png" alt="Imperial Falconry Services Inc." />
           </router-link>
         </div>
         <div>

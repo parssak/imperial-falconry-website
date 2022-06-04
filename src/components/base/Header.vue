@@ -1,19 +1,16 @@
 <template>
   <div class="relative">
     <div class="absolute inset-0">
-      <img
-        class="w-full h-full object-cover"
-        src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-        alt=""
-      />
+      <img class="w-full h-full object-cover" :src="img" alt="" />
       <div
-        class="absolute inset-0 bg-accent mix-blend-multiply"
+        class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60"
         aria-hidden="true"
       />
     </div>
     <Container>
-      <div class="py-8">
-        <h1 class="text-white capitalize">
+      <div class="py-16 md:py-24 text-center">
+        <h4 class="text-accent">Imperial Falconry Services Inc.</h4>
+        <h1 class="text-white">
           {{ title ?? $route.meta.title }}
         </h1>
         <p v-if="description" class="mt-6 text-xl text-indigo-100 max-w-3xl">
@@ -26,9 +23,18 @@
 
 <script setup>
 import Container from "@/components/layouts/Container.vue";
+import { useRoute } from "vue-router";
 
 const { title, description } = defineProps({
   title: String,
   description: String,
 });
+
+const getBannerImageURL = (name) => {
+  return new URL(`../../assets/images/banner/${name}.png`, import.meta.url)
+    .href;
+};
+
+const route = useRoute();
+const img = getBannerImageURL(route.name);
 </script>

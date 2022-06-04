@@ -19,11 +19,6 @@ export default {
       default: false,
     },
   },
-  computed: {
-    hasDefaultSlot() {
-      return !!this.$slots.default;
-    },
-  },
   setup() {
     const getImageUrl = (name) => {
       return new URL(`../../assets/${name}`, import.meta.url).href;
@@ -53,13 +48,19 @@ export default {
         </p>
         <slot name="extra-content"></slot>
       </section>
-      <section>
-        <div class="split-img-wrapper w-full h-full rounded-xl overflow-hidden">
-          <slot></slot>
-          <img
-            v-if="!hasDefaultSlot"
-            :src="getImageUrl('images/bird-1.png')"
-          />
+      <section class="relative">
+        <div
+          class="
+            split-img-wrapper
+            w-full
+            h-full
+            overflow-hidden
+            lg:absolute lg:inset-0
+          "
+        >
+          <slot>
+            <img :src="getImageUrl('images/bird-1.png')" />
+          </slot>
         </div>
       </section>
     </div>

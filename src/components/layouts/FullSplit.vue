@@ -53,7 +53,7 @@ const { flipped, leftClass, rightClass, dark, center } = defineProps({
         ${rightClass}
         relative
         w-full
-        h-72
+        h-80
         lg:absolute lg:inset-y-0 ${
           flipped ? 'lg:left-0' : 'lg:right-0'
         } lg:w-1/2 lg:h-full
