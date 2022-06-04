@@ -18,6 +18,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    wide: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup() {
     const getImageUrl = (name) => {
@@ -41,7 +45,7 @@ export default {
 <template>
   <Container :class="dark && 'bg-accent-dark'">
     <div class="grid gap-8 md:gap-12 lg:grid-cols-2">
-      <section :class="flip && `lg:order-1`" class="lg:py-12">
+      <section :class="[flip && `lg:order-1`, wide ? 'lg:py-24' : 'lg:py-12']">
         <h2 :class="dark && 'text-white'" class="leading-tight">{{ title }}</h2>
         <p :class="dark && 'text-white'" class="font-light text-lg">
           <span v-html="description"></span>
@@ -49,19 +53,9 @@ export default {
         <slot name="extra-content"></slot>
       </section>
       <section class="relative">
-        <div
-          class="
-            split-img-wrapper
-            w-full
-            h-full
-            overflow-hidden
-            lg:absolute lg:inset-0
-          "
-        >
-          <slot>
-            <img :src="getImageUrl('images/bird-1.png')" />
-          </slot>
-        </div>
+        <slot>
+          <img :src="getImageUrl('images/bird-1.png')" />
+        </slot>
       </section>
     </div>
   </Container>
