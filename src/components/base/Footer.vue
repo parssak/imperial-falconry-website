@@ -5,23 +5,15 @@
       <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
         <div class="xl:col-span-2">
           <router-link :to="{ name: 'home' }">
-            <img class="w-auto h-12" src="@/assets/logo.png" alt="Imperial Falconry Services Inc." />
+            <img
+              class="w-auto h-12"
+              src="@/assets/logo.png"
+              alt="Imperial Falconry Services Inc."
+            />
           </router-link>
         </div>
         <div>
-          <h3
-            class="
-              mb-3
-              font-semibold
-              text-lg
-              uppercase
-              font-serif
-              tracking-wider
-              text-accent-lightest
-            "
-          >
-            Navigation
-          </h3>
+          <h3 class="text-accent-lightest">Navigation</h3>
           <div class="space-y-1">
             <router-link
               v-for="route in navigation"

@@ -9,7 +9,7 @@
     </div>
     <Container>
       <div class="py-16 md:py-24 text-center">
-        <h4 class="text-accent">Imperial Falconry Services Inc.</h4>
+        <h4 class="text-accent mb-3">Imperial Falconry Services Inc.</h4>
         <h1 class="text-accent-lightest">
           {{ title ?? $route.meta.title }}
         </h1>

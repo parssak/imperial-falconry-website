@@ -31,13 +31,18 @@ h2 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   @apply font-bold uppercase;
   font-family: "Lora", serif;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl tracking-tight text-accent-darkest mb-4 md:mb-6;
+  @apply font-semibold
+              text-lg
+              uppercase
+              font-serif
+              tracking-wider mb-3;
 }
 
 h4 {
@@ -45,7 +50,7 @@ h4 {
 }
 
 p {
-  @apply text-lg text-accent-darkest leading-relaxed;
+  @apply text-lg text-accent-darkest;
 }
 
 ul:not(.unstyled) {
