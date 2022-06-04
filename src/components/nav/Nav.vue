@@ -1,5 +1,5 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-accent-darkest shadow">
+  <Popover class="sticky left-0 top-0 w-full z-50 bg-accent-darkest shadow">
     <div
       v-if="showAnnouncement"
       class="
