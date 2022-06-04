@@ -1,41 +1,44 @@
 <template>
   <Header />
-  <Container>
-    <div class="text-center">
-      <h4>Who We Are</h4>
-      <h2>About IFSI</h2>
-      <p class="max-w-2xl mx-auto">
+
+  <Texture>
+    <Container>
+      <div class="text-center">
+        <h4>Who We Are</h4>
+        <h2>About IFSI</h2>
+        <p class="max-w-2xl mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus massa
+          tortor est, quam sed. Pellentesque scelerisque gravida auctor nibh eu
+          id lacus. Auctor consequat risus amet mauris elementum leo non amet
+          sollicitudin. Id sed enim vitae posuere morbi lobortis egestas
+          molestie scelerisque.
+        </p>
+        <router-link :to="{ name: 'about' }" class="btn btn-xl mt-8">
+          <span> Read More </span>
+        </router-link>
+      </div>
+    </Container>
+
+    <FullSplit :flipped="true" dark>
+      <h4 class="text-accent">Our Services</h4>
+      <h2 class="text-accent-lightest">What We Offer</h2>
+      <p class="text-accent-lightest">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus massa
         tortor est, quam sed. Pellentesque scelerisque gravida auctor nibh eu id
-        lacus. Auctor consequat risus amet mauris elementum leo non amet
-        sollicitudin. Id sed enim vitae posuere morbi lobortis egestas molestie
-        scelerisque.
+        lacus. Auctor consequat risus amet mauris.
       </p>
-      <router-link :to="{ name: 'about' }" class="btn btn-xl mt-8">
-        <span> Read More </span>
+      <router-link :to="{ name: 'services' }" class="btn btn-xl btn-light mt-8">
+        <span> Learn More </span>
       </router-link>
-    </div>
-  </Container>
-
-  <FullSplit :flipped="true" dark>
-    <h4 class="text-accent">Our Services</h4>
-    <h2 class="text-accent-lightest">What We Offer</h2>
-    <p class="text-accent-lightest">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus massa
-      tortor est, quam sed. Pellentesque scelerisque gravida auctor nibh eu id
-      lacus. Auctor consequat risus amet mauris.
-    </p>
-    <router-link :to="{ name: 'services' }" class="btn btn-xl btn-light mt-8">
-      <span> Learn More </span>
-    </router-link>
-    <template v-slot:right>
-      <img
-        src="@/assets/images/bird-1.png"
-        class="w-full h-full object-cover"
-        alt=""
-      />
-    </template>
-  </FullSplit>
+      <template v-slot:right>
+        <img
+          src="@/assets/images/bird-1.png"
+          class="w-full h-full object-cover"
+          alt=""
+        />
+      </template>
+    </FullSplit>
+  </Texture>
 
   <Carousel />
 
@@ -104,8 +107,6 @@
       </Container>
     </div>
   </Texture>
-
-  
 </template>
 
 <script setup>

@@ -5,7 +5,7 @@
         <h2 class="mb-0 text-xl">
           interested in our services? contact us for a free consultation
         </h2>
-        <router-link :to="{ name: 'contact' }" class="btn btn-hover-dark btn-xl mt-4 md:mt-0 md:ml-2">
+        <router-link :to="{ name: 'contact' }" class="btn btn-hover-dark btn-xl mt-4 md:mt-0 md:ml-2 !bg-transparent">
           <span>Contact Us</span>
         </router-link>
       </div>

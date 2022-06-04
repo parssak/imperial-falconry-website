@@ -10,7 +10,7 @@
     <Container>
       <div class="py-16 md:py-24 text-center">
         <h4 class="text-accent">Imperial Falconry Services Inc.</h4>
-        <h1 class="text-white">
+        <h1 class="text-accent-lightest">
           {{ title ?? $route.meta.title }}
         </h1>
         <p v-if="description" class="mt-6 text-xl text-indigo-100 max-w-3xl">
