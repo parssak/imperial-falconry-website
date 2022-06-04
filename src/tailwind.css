@@ -1,27 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* #region - Typography -  */
 * {
-  font-family: Inter;
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  @apply bg-accent-lightest;
 }
 
 h1 {
-  @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl;
+  @apply text-4xl tracking-normal text-accent-darkest sm:text-5xl md:text-6xl;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 mb-6 md:mb-8;
+  @apply text-3xl md:text-4xl tracking-normal text-accent-darkest mb-4;
+}
+
+h1,
+h2 {
+  @apply font-bold uppercase;
+  font-family: "Lora", serif;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 mb-4 md:mb-6;
+  @apply text-2xl md:text-3xl tracking-tight text-accent-darkest mb-4 md:mb-6;
+}
+
+h4 {
+  @apply font-semibold mb-2;
 }
 
 p {
-  @apply text-base text-gray-500 leading-relaxed;
+  @apply text-lg text-accent-darkest leading-relaxed;
 }
 
 ul:not(.unstyled) {
@@ -70,17 +87,41 @@ select {
 }
 
 .btn {
-  @apply w-max inline-flex items-center border border-transparent font-medium shadow-sm transition
-        text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent;
+  @apply relative w-max
+  inline-flex
+  items-center
+  border
+  tracking-wide
+border-accent-darkest
+  font-bold
+  transition
+text-accent-darkest
+  bg-transparent
+  focus:outline-none
+  focus:ring-2 
+  focus:ring-offset-2 
+focus:ring-accent;
 }
 
-.btn-dark {
-  @apply text-white bg-accent hover:bg-accent-hover focus:ring-accent;
+.btn * {
+  @apply relative z-20 transition-all duration-200;
+}
+
+.btn::before {
+  @apply absolute inset-x-0  bottom-0 top-full bg-transparent transition-all duration-200 -m-px;
+  content: "";
+}
+
+.btn:hover::before {
+  @apply top-0 bg-accent;
 }
 
 .btn-light {
-  @apply text-accent bg-accent-light hover:bg-accent-light_hover;
+  @apply text-accent border-accent;
+}
+
+.btn-light:hover * {
+  @apply text-accent-darkest;
 }
 
 .btn-xs {
@@ -96,11 +137,11 @@ select {
 }
 
 .btn-lg {
-  @apply px-4 py-2 text-base rounded-md;
+  @apply px-4 py-2 text-base;
 }
 
 .btn-xl {
-  @apply px-4 py-2 text-base md:px-6 md:py-3 md:text-lg rounded-md;
+  @apply text-base px-10 py-3;
 }
 
 /* #endregion - Inputs -  */
@@ -110,8 +151,7 @@ select {
 /* #region - Nav - */
 
 .nav-item {
-  @apply 
-              rounded-md
+  @apply rounded-md
               inline-flex
               items-center
               text-base

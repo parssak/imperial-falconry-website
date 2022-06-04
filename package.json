@@ -1,5 +1,5 @@
 {
-  "name": "template-website",
+  "name": "imperial-falconry-website",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
@@ -8,6 +8,7 @@
     "pages": "yarn build "
   },
   "dependencies": {
+    "swiper": "^8.2.2",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15"
   },

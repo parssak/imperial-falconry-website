@@ -58,7 +58,7 @@ export default {
           <slot></slot>
           <img
             v-if="!hasDefaultSlot"
-            :src="getImageUrl('images/contact.png')"
+            :src="getImageUrl('images/bird-1.png')"
           />
         </div>
       </section>

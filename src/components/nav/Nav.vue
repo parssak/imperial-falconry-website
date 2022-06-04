@@ -1,5 +1,5 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
+  <Popover class="sticky left-0 top-0 w-full z-20 bg-accent-darkest shadow">
     <div
       v-if="showAnnouncement"
       class="
@@ -183,7 +183,7 @@ export default {
   },
   data() {
     // Set showAnnouncement to true if you want to preview the alert
-    return { showAnnouncement: true, top: true };
+    return { showAnnouncement: false, top: true };
   },
   watch: {
     // listen for route change

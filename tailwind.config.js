@@ -6,25 +6,26 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+        serif: ['Lora', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         accent: {
-          darkest: "#63656A",
-          dark: "#90a4ae",
-          DEFAULT: "#ec7615",
-          hover: "#ED8C5F",
-          light: "#ec76151A",
-          light_hover: "#ec76151A",
-          lightest: "#fafafa",
-        },
-      },
-    },
+          darkest: "#0E2506",
+          dark: "#E20000",
+          DEFAULT: "#FFEA00",
+          hover: "#E20000",
+          light: "#E20000",
+          light_hover: "#E20000",
+          lightest: "#E1E1C5"
+        }
+      }
+    }
   },
   plugins: [
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/aspect-ratio"),
-  ],
+    require("@tailwindcss/aspect-ratio")
+  ]
 };
