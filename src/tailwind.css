@@ -16,7 +16,7 @@ h4::selection,
 p::selection,
 a::selection,
 span::selection,
-address::selection, {
+address::selection {
   @apply bg-accent text-accent-darkest;
 }
 
@@ -98,7 +98,7 @@ input[type="email"]:not(.text-base),
 input[type="number"],
 textarea,
 select {
-  @apply border-gray-400 focus:border-accent text-lg py-3 px-4 block w-full rounded-md;
+  @apply border border-accent-darkest focus:outline-none focus:ring-0 focus:border-accent-darkest focus:bg-accent transition duration-100 text-lg py-3 px-4 block w-full bg-accent-lightest;
 }
 
 .btn {
