@@ -13,7 +13,10 @@ h1::selection,
 h2::selection,
 h3::selection,
 h4::selection,
-p::selection {
+p::selection,
+a::selection,
+span::selection,
+address::selection, {
   @apply bg-accent text-accent-darkest;
 }
 
@@ -42,7 +45,7 @@ h3 {
               text-lg
               uppercase
               font-serif
-              tracking-wider mb-3;
+              tracking-wider mb-3 leading-tight;
 }
 
 h4 {
@@ -50,7 +53,7 @@ h4 {
 }
 
 p {
-  @apply text-lg text-accent-darkest;
+  @apply text-base text-accent-darkest;
 }
 
 ul:not(.unstyled) {

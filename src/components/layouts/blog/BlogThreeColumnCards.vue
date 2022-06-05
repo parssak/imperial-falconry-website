@@ -24,18 +24,13 @@
       <div
         v-for="post in posts"
         :key="post.title"
-        class="flex flex-col rounded-lg shadow-lg overflow-hidden"
+        class="flex flex-col border border-accent-darkest overflow-hidden"
       >
         <div class="flex-shrink-0">
           <img class="h-48 w-full object-cover" :src="post.imageUrl" alt="" />
         </div>
-        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+        <div class="flex-1 bg-accent-lightest p-6 flex flex-col justify-between">
           <div class="flex-1">
-            <p class="text-sm font-medium text-accent">
-              <router-link :to="post.href" class="hover:underline">
-                {{ post.category.name }}
-              </router-link>
-            </p>
             <router-link :to="post.href" class="block mt-2">
               <p class="text-xl font-semibold text-gray-900">
                 {{ post.title }}
@@ -47,7 +42,7 @@
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <router-link :to="post.href">
+              <router-link :to="{ name: 'post' }">
                 <span class="sr-only">{{ post.author.name }}</span>
                 <img
                   class="h-10 w-10 rounded-full"
@@ -78,7 +73,7 @@
 </template>
 
 <script>
-import Container from '../Container.vue';
+import Container from "../Container.vue";
 
 const defaultPosts = [
   {

@@ -55,13 +55,14 @@ export const ROUTES_SOURCE = [
     component: () => import("@/views/blog/index.vue"),
     meta: { title: "Our Blog" }
   },
-  // {
-  //   path: "/blog/:post",
-  //   label: "post",
-  //   name: "post",
-  //   component: () => import("@/views/blog/post/index.vue"),
-  //   meta: { title: "Post" }
-  // },
+  {
+    path: "/blog/:id",
+    label: "post",
+    name: "post",
+    component: () => import("@/views/blog/post/index.vue"),
+    hidden: true,
+    meta: { title: "Post" }
+  },
   {
     path: "/contact",
     label: "contact us",

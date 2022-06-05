@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
-        serif: ['Lora', ...defaultTheme.fontFamily.serif],
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        serif: ["Lora", ...defaultTheme.fontFamily.serif]
       },
       colors: {
         accent: {
