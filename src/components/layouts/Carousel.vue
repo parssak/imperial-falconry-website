@@ -16,14 +16,17 @@ const items = [
   {
     name: "Harris Hawk",
     image: getImageURL("hawk.png"),
+    backgroundImage: getImageURL("hawk-bg.png"),
   },
   {
     name: "Bald Eagle",
     image: getImageURL("eagle.png"),
+    backgroundImage: getImageURL("eagle-bg.png"),
   },
   {
     name: "Bald Eagle",
     image: getImageURL("eagle.png"),
+    backgroundImage: getImageURL("eagle-bg.png"),
   },
 ];
 
@@ -109,13 +112,37 @@ const modules = [Pagination, Navigation];
               <swiper-slide
                 v-for="(item, index) in items"
                 :key="index"
-                class="relative select-none"
+                class="relative select-none group"
               >
+                <img
+                  :src="item.backgroundImage"
+                  alt=""
+                  class="
+                    h-96
+                    w-full
+                    lg:h-full
+                    object-cover
+                    select-none
+                    absolute
+                    inset-0
+                  "
+                />
                 <img
                   :src="item.image"
                   alt=""
-                  class="h-96 w-full lg:h-full object-cover select-none"
+                  class="
+                    h-96
+                    w-full
+                    relative
+                    lg:h-full
+                    object-cover
+                    select-none
+                    transition-all
+                    duration-300
+                    group-hover:opacity-0
+                  "
                 />
+
                 <div
                   class="
                     select-none

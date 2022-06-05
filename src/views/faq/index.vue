@@ -1,62 +1,9 @@
-<script setup>
-import Header from "@/components/base/Header.vue";
-import Container from "@/components/layouts/Container.vue";
-import Texture from "@/components/base/Texture.vue";
-import NarrowCTA from "@/components/layouts/cta/NarrowCTA.vue";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-import { ArrowDownIcon } from "@heroicons/vue/solid";
-
-const getIconURL = (name) => {
-  return new URL(`../../assets/icons/${name}`, import.meta.url).href;
-};
-
-const DEFAULT_QUESTION =
-  "What are the frequently asked questions related to these services?";
-
-const DEFAULT_ANSWER =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est maecenas pharetra turpis hendrerit.";
-
-const faqs = [
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-  {
-    question: DEFAULT_QUESTION,
-    answer: DEFAULT_ANSWER,
-  },
-];
-</script>
 <template>
   <Header />
 
   <Texture>
     <Container>
-      <p class="max-w-4xl md:text-center md:mx-auto">
+      <p class="max-w-4xl md:text-center md:mx-auto py-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, aliquet
         diam, facilisi sed amet, arcu lorem cursus. Ultrices diam nec amet,
         nulla viverra vestibulum, aliquet tortor. Pellentesque vulputate
@@ -142,3 +89,53 @@ const faqs = [
 
   <NarrowCTA />
 </template>
+
+<script setup>
+import Header from "@/components/base/Header.vue";
+import Container from "@/components/layouts/Container.vue";
+import Texture from "@/components/base/Texture.vue";
+import NarrowCTA from "@/components/layouts/cta/NarrowCTA.vue";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
+import { ArrowDownIcon } from "@heroicons/vue/solid";
+
+const DEFAULT_QUESTION =
+  "What are the frequently asked questions related to these services?";
+
+const DEFAULT_ANSWER =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est maecenas pharetra turpis hendrerit.";
+
+const faqs = [
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+  {
+    question: DEFAULT_QUESTION,
+    answer: DEFAULT_ANSWER,
+  },
+];
+</script>

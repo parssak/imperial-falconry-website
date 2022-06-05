@@ -8,52 +8,52 @@ export const ROUTES_SOURCE = [
   },
   {
     path: "/about",
-    label: "about",
+    label: "about us",
     name: "about",
     component: () => import("@/views/about/index.vue"),
-    meta: { title: "About Us" }
+    meta: { title: "About Us", subtitle: "Imperial Falconry Services Inc." }
   },
   {
     path: "/services",
     label: "services",
     name: "services",
     component: () => import("@/views/services/index.vue"),
-    meta: { title: "What We Offer" }
+    meta: { title: "What We Offer", subtitle: "Services" }
   },
   {
     path: "/birds",
-    label: "birds",
+    label: "Our Birds",
     name: "birds",
     component: () => import("@/views/birds/index.vue"),
-    meta: { title: "Our Birds" }
+    meta: { title: "Our Birds", subtitle: "Meet The Team" }
   },
   {
     path: "/industries",
     label: "industries",
     name: "industries",
     component: () => import("@/views/industries/index.vue"),
-    meta: { title: "Industries We Serve" }
+    meta: { title: "Industries We Serve", subtitle: "Commercial Sites" }
   },
   {
     path: "/areas",
     label: "areas",
     name: "areas",
     component: () => import("@/views/areas/index.vue"),
-    meta: { title: "Areas We Serve" }
+    meta: { title: "Areas We Serve", subtitle: "Geographical Zones" }
   },
   {
     path: "/faq",
-    label: "faq",
+    label: "FAQ",
     name: "faq",
     component: () => import("@/views/faq/index.vue"),
-    meta: { title: "Frequently Asked Questions" }
+    meta: { title: "Frequently Asked Questions", subtitle: "Find The Answers To Your Questions" }
   },
   {
     path: "/blog",
     label: "blog",
     name: "blog",
     component: () => import("@/views/blog/index.vue"),
-    meta: { title: "Our Blog" }
+    meta: { title: "Our Blog", subtitle: "Ideas, Thoughts, And Insights" }
   },
   {
     path: "/blog/:id",
@@ -68,6 +68,6 @@ export const ROUTES_SOURCE = [
     label: "contact us",
     name: "contact",
     component: () => import("@/views/contact/index.vue"),
-    meta: { title: "contact us" }
+    meta: { title: "contact us", subtitle: "Get In Touch" }
   }
 ];

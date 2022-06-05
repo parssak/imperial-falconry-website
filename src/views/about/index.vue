@@ -54,7 +54,7 @@
 
   <Texture>
     <Container>
-      <div class="text-center flex flex-col items-center">
+      <div class="text-center flex flex-col items-center py-12">
         <h2>About Michael</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis sit id

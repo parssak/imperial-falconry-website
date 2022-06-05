@@ -43,7 +43,7 @@ export default {
 </style>
 
 <template>
-  <Container :class="dark && 'bg-accent-dark'">
+  <Container :class="dark && 'bg-accent-darkest'">
     <div class="grid gap-8 md:gap-12 lg:grid-cols-2">
       <section :class="[flip && `lg:order-1`, wide ? 'lg:py-24' : 'lg:py-12']">
         <h2 :class="dark && 'text-white'" class="leading-tight">{{ title }}</h2>

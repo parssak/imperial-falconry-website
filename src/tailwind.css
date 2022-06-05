@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  @apply text-4xl tracking-normal text-accent-darkest sm:text-5xl md:text-6xl;
+  @apply text-4xl tracking-normal text-accent-darkest sm:text-5xl;
 }
 
 h2 {
@@ -53,7 +53,8 @@ h4 {
 }
 
 p {
-  @apply text-base text-accent-darkest;
+  @apply text-base leading-relaxed text-accent-darkest;
+  letter-spacing: 0.01em;
 }
 
 ul:not(.unstyled) {
@@ -175,8 +176,7 @@ focus:ring-accent
 /* #region - Nav - */
 
 .nav-item {
-  @apply rounded-md
-              inline-flex
+  @apply inline-flex
               items-center
               text-base
               font-medium
@@ -186,23 +186,22 @@ focus:ring-accent
               focus:outline-none
               focus:ring-2
               focus:ring-offset-2
-              focus:ring-accent-light;
+              focus:ring-accent;
 }
 
 .nav-item-mobile {
-  @apply mb-1
-                    p-2
+  @apply p-4
                     flex
                     items-center
-                    rounded-md
                     capitalize
                     transition
-                    hover:bg-accent-light
-                    hover:text-accent-dark;
+                    hover:bg-accent
+                    text-accent-lightest
+                    hover:text-accent-darkest;
 }
 
 .nav-item-mobile__text {
-  @apply ml-3 text-sm lg:text-base font-medium;
+  @apply text-sm lg:text-base font-bold;
 }
 
 nav a {
@@ -218,10 +217,21 @@ nav .router-link-active:not(.no-show-active) {
 }
 
 nav .router-link-active:not(.no-show-active).nav-item-mobile {
-  @apply bg-accent;
+  @apply bg-accent text-accent-darkest;
 }
 
-nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
+nav .router-link-active:not(.no-show-active):not(.nav-item-mobile) {
+  @apply bg-accent text-accent-darkest;
+}
+
+nav a:not(.nav-item-mobile) {
+  @apply py-6 px-2 xl:px-4 transition-all text-accent-lightest hover:bg-accent hover:text-accent-darkest font-bold;
+}
+
+/* py-6
+              px-2 */
+
+/* nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   @apply bg-accent-light;
   content: " ";
   position: absolute;
@@ -231,6 +241,6 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   height: 1.5px;
   transition: all 0.2s ease-in-out;
   transform: translateY(2px);
-}
+} */
 
 /* #endregion */

@@ -3,7 +3,7 @@
 
   <Texture>
     <Container>
-      <p class="max-w-4xl md:text-center md:mx-auto">
+      <p class="max-w-4xl md:text-center md:mx-auto py-6">
         The type of raptor that we assign to your work site is based on the size
         of your site, severity of the avian pest pressure, potential hazards,
         the suitable application of each raptor species (based on flight
@@ -43,7 +43,7 @@ const birds = [
     description: DEFAULT_DESCRIPTION,
     images: [
       getImageURL("hawk.png"),
-      getImageURL("hawk.png"),
+      getImageURL("hawk-bg.png"),
       getImageURL("hawk.png"),
     ],
   },
@@ -52,7 +52,7 @@ const birds = [
     description: DEFAULT_DESCRIPTION,
     images: [
       getImageURL("eagle.png"),
-      getImageURL("eagle.png"),
+      getImageURL("eagle-bg.png"),
       getImageURL("eagle.png"),
     ],
   },

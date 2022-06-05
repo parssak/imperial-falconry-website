@@ -3,7 +3,7 @@
     <div
       v-if="showAnnouncement"
       class="
-        bg-accent-light
+        bg-accent
         py-3
         flex
         items-center
@@ -23,14 +23,15 @@
         <XIcon class="w-6 h-6" />
       </button>
     </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="px-4 sm:px-6 lg:px-8">
       <div
         class="
           flex
           justify-between
           items-center
-          py-6
-          md:justify-start md:space-x-5
+          lg:justify-start lg:space-x-5
+          max-w-7xl
+          mx-auto
         "
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
@@ -45,25 +46,23 @@
             </div>
           </router-link>
         </div>
-        <div class="-mr-2 -my-2 md:hidden">
+        <div class="-mr-2 -my-2 py-6 lg:hidden">
           <PopoverButton
             class="
-              rounded-md
               p-2
               inline-flex
               items-center
               justify-center
-              text-white
-              hover:text-gray-500
               transition
-              hover:bg-white
+              text-accent
+              hover:bg-accent hover:text-accent-darkest
             "
           >
             <span class="sr-only">Open menu</span>
-            <MenuIcon class="h-6 w-6 text-accent" aria-hidden="true" />
+            <MenuIcon class="h-6 w-6" aria-hidden="true" />
           </PopoverButton>
         </div>
-        <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
+        <PopoverGroup as="nav" class="hidden lg:flex space-x-px">
           <NavItem
             v-for="item in navigation"
             :route="item"
@@ -96,47 +95,39 @@
           transition
           transform
           origin-top-right
-          md:hidden
+          lg:hidden
         "
       >
-        <div
-          class="
-            rounded-lg
-            shadow-lg
-            ring-1 ring-black ring-opacity-5
-            bg-gray-200
-            divide-y-2 divide-gray-50
-          "
-        >
+        <div class="ring-1 ring-black ring-opacity-5 bg-accent-darkest">
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <router-link :to="{ name: 'home' }">
                 <img
-                  class="h-7 w-auto"
-                  src="@/assets/logo.svg"
+                  class="h-9 w-auto"
+                  src="@/assets/logo.png"
                   alt="Imperial Falconry Services Inc."
                 />
               </router-link>
               <div class="-mr-2">
                 <PopoverButton
                   class="
-                    rounded-md
                     p-2
                     inline-flex
                     items-center
                     justify-center
                     transition
-                    hover:bg-accent-lightest
+                    text-accent
+                    hover:bg-accent hover:text-accent-darkest
                   "
                 >
                   <span class="sr-only">Close menu</span>
-                  <XIcon class="h-6 w-6 text-accent" aria-hidden="true" />
+                  <XIcon class="h-6 w-6" aria-hidden="true" />
                 </PopoverButton>
               </div>
             </div>
             <div class="mt-6">
               <nav class="grid">
-                <PopoverButton class="divide-y-2">
+                <PopoverButton class="space-y-px">
                   <router-link
                     v-for="item in navigation"
                     :key="item.label"

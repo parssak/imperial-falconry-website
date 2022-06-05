@@ -3,7 +3,7 @@
 
   <Texture>
     <Container>
-      <p class="max-w-4xl md:text-center md:mx-auto">
+      <p class="max-w-4xl md:text-center md:mx-auto py-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, aliquet
         diam, facilisi sed amet, arcu lorem cursus. Ultrices diam nec amet,
         nulla viverra vestibulum, aliquet tortor. Pellentesque vulputate
