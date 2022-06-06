@@ -169,7 +169,7 @@ const modules = [Pagination, Navigation];
                 </div>
               </swiper-slide>
             </swiper>
-            <div class="absolute inset-y-0 right-0 left-1/2 z-10 bg-gradient-to-l from-accent-darkest via-transparent hidden 2xl:block"></div>
+            <div class="absolute pointer-events-none inset-y-0 right-0 left-1/4 z-10 bg-gradient-to-l from-accent-darkest via-transparent hidden 2xl:block"></div>
 
             <!-- Buttons -->
             <div class="mt-8 flex space-x-6 items-center">
