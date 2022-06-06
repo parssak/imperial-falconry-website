@@ -76,7 +76,7 @@ const modules = [Pagination, Navigation];
     />
     <div class="absolute inset-0 bg-accent-darkest"></div>
     <section class="py-8 pl-4 sm:pl-6 relative">
-      <div class="max-w-full lg:max-w-7xl lg:mx-auto">
+      <div class="max-w-full lg:max-w-7xl lg:mx-auto 2xl:relative">
         <div class="md:pl-6 w-full grid h-full lg:grid-cols-3 gap-8">
           <div class="lg:py-32 sm:pr-6 lg:pr-12">
             <h4 class="text-accent">Meet Our Team</h4>
